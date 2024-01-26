@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right bottom, #faa8a8 40%, #ccc 20%, #eee 20%, #faa8a8 20%);
+    background-attachment: fixed;
+    width: max-content;
+}
+
+@media (max-width:1021px) {
+    .container {
+        position: relative;
+        right: 200px !important;
+    }
+}
+@media (max-width:901px) {
+    .container {
+        position: relative;
+        right: 400px !important;
+    }
+}
+@media (max-width:601px) {
+    .container {
+        position: relative;
+        right: 500px !important;
+    }
+}
+
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    transform: translateX(500px);
+    flex-wrap: wrap;
+}
+
+.container .form {
+    border-radius: 10px;
+    background-color: #ed3b3b;
+    width: 500px;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.148);
+}
+
+.container .form .input-text {
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 17px;
+    outline: none;
+    border-color: transparent;
+    border-radius: 10px;
+    border-style: solid 1px;
+    align-items: center;
+}
+
+
+.btn {
+    color: white;
+    background-color: #a40606;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.151);
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:active {
+    background-color: #dc1f1f;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.tasks {
+    margin-top: 20px;
+    background-color: #ed3b3b;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    caret-color: transparent;
+}
+
+.tasks .task {
+    display: flex;
+    background-color: #eee;
+    color: black;
+    padding: 6px 10px;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.tasks .task:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.tasks .task:hover {
+    background-color: #f7f7f7;
+}
+
+.tasks .task.done {
+    opacity: 0.5;
+}
+
+.tasks .task span {
+    font-weight: bold;
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    caret-color: transparent;
+}
+
+.tasks .task span:hover {
+    background-color: rgba(255, 0, 0, 0.669);
+}
+
+.tasks .task span:active {
+    background-color: orange;
+}
+
+.tasks .task span::selection {
+    background-color: transparent;
+}
